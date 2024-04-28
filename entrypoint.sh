@@ -37,7 +37,6 @@ release_url=$(dotnet gitreleasemanager create \
 --milestone-title $milestone_name \
 --token $repo_token \
 --targetcommitish $GITHUB_SHA \
-# --name $milestone_name \
 --owner $owner \
 --repository $repository)
 
