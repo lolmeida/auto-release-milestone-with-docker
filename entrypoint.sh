@@ -48,8 +48,8 @@ fi
 
 
 # set the output variable release-url to http://example.com
-#echo "::set-output name=release-url::http://example.com" 
-echo "release-url=$release_url" >> $GITHUB_OUTPUT
+echo "::set-output name=release-url::http://example.com" 
+#echo "release-url=$release_url" >> $GITHUB_OUTPUT
 
 
 # exit with a successful status code
