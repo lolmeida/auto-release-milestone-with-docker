@@ -6,10 +6,9 @@ LABEL version="0.1.0"
 LABEL repsityory="https://github.com/lolmeida/auto-release-milestone-with-docker"
 LABEL maintainer="Lourenço Almeida "
 
-# Update and Install jq
-RUN apt-get update && apt-get install -y jq  
-# Install GitReleaseManager
-RUN dotnet tool install -g GitReleaseManager.Tool
+# Update and Install
+RUN apt-get update && apt-get install -y jq         # Install jq 
+RUN dotnet tool install -g GitReleaseManager.Tool --verbose;  # Install GitReleaseManager
 
 # Add GitReleaseManager to PATH
 ENV PATH /root/.dotnet/tools:$PATH  
