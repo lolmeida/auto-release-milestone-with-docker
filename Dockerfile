@@ -8,7 +8,7 @@ LABEL maintainer="Lourenço Almeida "
 
 # Update and Install
 RUN apt-get update && apt-get install -y jq         # Install jq 
-RUN dotnet tool install -g GitReleaseManager.Tool --verbose;  # Install GitReleaseManager
+RUN dotnet tool install --global GitReleaseManager.Tool --verbose;  # Install GitReleaseManager
 
 # Add GitReleaseManager to PATH
 ENV PATH /root/.dotnet/tools:$PATH  

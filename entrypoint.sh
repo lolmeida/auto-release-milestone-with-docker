@@ -38,8 +38,8 @@ release_url=$(dotnet gitreleasemanager create \
 --token $repo_token \
 --targetcommitish $GITHUB_SHA \
 # --name $milestone_name \
---owner $GITHUB_REPOSITORY_OWNER \
---repository $GITHUB_REPOSITORY --verbose)
+--owner $owner \
+--repository $repository)
 
 
 if [ $? -ne 0 ]; then
