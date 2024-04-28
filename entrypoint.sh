@@ -43,15 +43,13 @@ release_url=$(dotnet gitreleasemanager create \
 
 if [ $? -ne 0 ]; then
   echo "::error::Failed to create the release draft"
-  exit 1
+  exit 1                                                  # exit with a failure status code
 fi
 
 
-# set the output variable release-url to http://example.com
-# echo "::set-output name=release-url::http://example.com" 
-echo "release-url=$release_url" >> $GITHUB_OUTPUT
+# set the release-url output variable
+echo "::set-output name=release-url::$release_url"      # OR echo "release-url=$release_url" >> $GITHUB_OUTPUT
 
-
-# exit with a successful status code
-exit 0 
+# exit with a success status code
+exit 0                                                  # exit with a success status code
 
