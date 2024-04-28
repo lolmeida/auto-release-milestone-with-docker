@@ -16,3 +16,4 @@ ENV PATH /root/.dotnet/tools:$PATH
 
 COPY entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]
+
