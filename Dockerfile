@@ -6,5 +6,8 @@ LABEL version="0.1.0"
 LABEL repsityory="https://github.com/lolmeida/auto-release-milestone-with-docker"
 LABEL maintainer="Lourenço Almeida "
 
+# Update and Install jq
+RUN apt-get update && apt-get install -y jq  
+
 COPY entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]
