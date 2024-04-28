@@ -6,7 +6,9 @@
 # set -u // exit when using an undefined variable
 
 # exit when any command fails, print each command before executing, exit when using an undefined variable
-set -e -x -u 
+# set -e -x -u 
+
+set -u // exit when using an undefined variable
 
 # set the output variable release-url to http://example.com
 # echo "::set-output name=release-url::http://example.com" 
