@@ -22,13 +22,9 @@ jobs:
       - name: Create the Release draft for a milestone
         id: create-release-draft
         uses: ./ # Uses an action in the root directory
-        #with:
-        #  token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Print the url of the release draft
         if: steps.create-release-draft.outputs.release_url != ''
         run: echo  ${{ steps.create-release-draft.outputs.release_url }}"
-
-      - name: Print batata
-        if : steps.create-release-draft.outputs.release_url != ''
-        run: echo "batata"
