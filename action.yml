@@ -1,0 +1,16 @@
+name: 'Auto Release Milestone'
+description: 'Drafts a Github realease based on newly closed milestone'
+author: 'Lourrenço Almeida'
+
+outputs:
+  release-url :
+    description: 'The url of the Githubrelease that was drafted'
+
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+
+  
+
