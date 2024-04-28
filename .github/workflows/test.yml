@@ -25,7 +25,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           repo-token: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
           draft: true
           prerelease: false
       - name: Get the release URL
