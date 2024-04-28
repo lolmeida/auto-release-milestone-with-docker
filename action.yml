@@ -4,7 +4,7 @@ author: 'Lourrenço Almeida'
 
 outputs:
   release-url :
-    description: 'The url of the Githubrelease that was drafted'
+    description: 'The url of the Github release that was drafted'
 
 
 runs:

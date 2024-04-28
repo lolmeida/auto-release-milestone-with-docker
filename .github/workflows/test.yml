@@ -21,7 +21,7 @@ jobs:
       
       - name: Create the Release draft for a milestone
         id: create-release-draft
-        uses: ./
+        uses: ./ # Uses an action in the root directory
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           
