@@ -48,7 +48,8 @@ fi
 
 
 # set the release-url output variable
-echo "::set-output name=release-url::$release_url"      # OR echo "release-url=$release_url" >> $GITHUB_OUTPUT
+#echo "::set-output name=release-url::$release_url"      # OR 
+echo "release-url=$release_url" >> $GITHUB_OUTPUT
 
 # exit with a success status code
 exit 0                                                  # exit with a success status code
