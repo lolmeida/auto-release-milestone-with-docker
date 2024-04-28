@@ -29,6 +29,6 @@ jobs:
           repo-token: ${{ github.ref }}
       
       - name: Print the url for the release draft
-        if: steps.create-release-draft.outputs.release-url != ''
+        if: steps.create-release-draft.outputs.release-url
         run: echo "${{ steps.create-release-draft.outputs.release-url }}"
       
