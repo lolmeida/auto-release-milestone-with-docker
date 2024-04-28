@@ -54,3 +54,4 @@ echo "::set-output name=release-url::http://example.com"
 
 # exit with a successful status code
 exit 0 
+
