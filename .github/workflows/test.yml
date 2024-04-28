@@ -30,5 +30,5 @@ jobs:
         run: echo  ${{ steps.create-release-draft.outputs.release_url }}"
 
       - name: Print batata
-        # if : steps.create-release-draft.outputs.release_url != ''
+        if : steps.create-release-draft.outputs.release_url != ''
         run: echo "batata"
