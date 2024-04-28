@@ -24,9 +24,8 @@ jobs:
         id: create-release-draft
         uses: ./ # Uses an action in the root directory
         with:
-          repo-token: ${{ inputs.repo-token }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       
-    
       - name: Print the url for the release draft
         if: steps.create-release-draft.outputs.release-url != ''
         run: echo "${{ steps.create-release-draft.outputs.release-url }}"
