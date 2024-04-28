@@ -2,6 +2,11 @@ name: 'Auto Release Milestone'
 description: 'Drafts a Github realease based on newly closed milestone'
 author: 'Lourrenço Almeida'
 
+inputs:
+  repo-token:
+    description: 'The Github token to use to create the release'
+    required: true
+
 outputs:
   release-url :
     description: 'The url of the Github release that was drafted'

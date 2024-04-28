@@ -23,7 +23,7 @@ jobs:
         id: create-release-draft
         uses: ./ # Uses an action in the root directory
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Print the url of the release draft
         if: steps.create-release-draft.outputs.release_url != ''
