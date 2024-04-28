@@ -16,17 +16,17 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Create the Release draft for a milestone
-        id: create-release-draft
-        uses: ./ # Uses an action in the root directory
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #with:
-        #  repo-token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Print the url of the release draft
-        if: steps.create-release-draft.outputs.release_url != ''
-        run: echo  ${{ steps.create-release-draft.outputs.release_url }}"
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: true
+          prerelease: false
+      - name: Get the release URL
+        run: echo "The release URL is ${{ steps.create_release.outputs.html_url }}"
