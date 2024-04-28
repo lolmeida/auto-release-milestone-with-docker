@@ -11,6 +11,7 @@ set -e -x -u
 # set the output variable release-url to http://example.com
 # echo "::set-output name=release-url::http://example.com" 
 echo "release-url=http://example.com" >> $GITHUB_OUTPUT
+echo "The release-url is: $GITHUB_OUTPUT"
 
 # exit with a successful status code
 exit 0 
