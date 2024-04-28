@@ -11,10 +11,11 @@ outputs:
   release-url :
     description: 'The url of the Github release that was drafted'
 
-
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.repo-token }}
 
 
   

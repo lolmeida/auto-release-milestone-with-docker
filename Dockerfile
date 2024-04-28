@@ -8,6 +8,11 @@ LABEL maintainer="Lourenço Almeida "
 
 # Update and Install jq
 RUN apt-get update && apt-get install -y jq  
+# Install GitReleaseManager
+RUN dotnet tool install --global GitReleaseManager.Tool
+
+# Add GitReleaseManager to PATH
+ENV PATH /root/.dotnet/tools:$PATH  
 
 COPY entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]
